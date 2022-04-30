@@ -20,7 +20,7 @@ namespace PlottnerBowlingChallenge.Business.Validators
             ValidationContext vc = new ValidationContext(value);
             var results = new List<ValidationResult>();
             Validator.TryValidateObject(value, vc, results, true);
-            return results
+            return results;
         }
     }
 }
