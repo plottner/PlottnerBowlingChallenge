@@ -69,6 +69,7 @@ namespace PlottnerBowlingChallenge.Business
                 }
             }
             _frameRepository.SaveFrame(frame);
+            return _scoringService.GetPlayerScore(saveRollItem.PlayerId, saveRollItem.GameId);
         }
     }
 }
