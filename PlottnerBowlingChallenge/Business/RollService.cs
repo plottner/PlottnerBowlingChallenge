@@ -30,7 +30,7 @@ namespace PlottnerBowlingChallenge.Business
             var validationResult = _saveRollItemValidator.Validate(saveRollItem);
             if(validationResult.Count > 0)
             {
-                throw new ArgumentException(String.Join(Environment.NewLine, validationResult.Select(vr => $"{vr.MemberNames} - {vr.ErrorMessage}"));
+                throw new ArgumentException(String.Join(Environment.NewLine, validationResult.Select(vr => $"{vr.MemberNames} - {vr.ErrorMessage}")));
             }
 
             var frame = _frameRepository.GetFrame(saveRollItem.PlayerId, saveRollItem.GameId, saveRollItem.FrameNumber);
